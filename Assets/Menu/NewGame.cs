@@ -7,7 +7,6 @@ public class NewGame : MonoBehaviour
 {
     public void StartGame()
     {
-        Debug.Log("clicked");
         SceneManager.LoadScene("Main Game");
     }
 
