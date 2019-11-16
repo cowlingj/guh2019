@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class collisionDetect : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class collisionDetect : MonoBehaviour
     {
         if (collision.CompareTag("Obstacle"))
         {
-            Debug.Log("Ouchie");
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
