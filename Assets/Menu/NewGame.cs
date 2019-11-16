@@ -10,7 +10,6 @@ public class NewGame : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Main Game");
-        Debug.Log("I am clicked");
     }
 
 }
