@@ -342,9 +342,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1671573616}
   - component: {fileID: 1671573615}
-  - component: {fileID: 1671573617}
-  - component: {fileID: 1671573619}
   - component: {fileID: 1671573618}
+  - component: {fileID: 1671573617}
   m_Layer: 8
   m_Name: Pkayer
   m_TagString: Player
@@ -414,22 +413,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1671573617
-Animation:
+--- !u!95 &1671573617
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671573614}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: cf4b0c371dff868469669a189692e9c0, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8146f760e2c290146ae00d7cc19fd9cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1671573618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,26 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airtime: 60
-  jumpMultiplier: 0
---- !u!95 &1671573619
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671573614}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  jumpMultiplier: 0.2
 --- !u!1 &1932255135
 GameObject:
   m_ObjectHideFlags: 0
