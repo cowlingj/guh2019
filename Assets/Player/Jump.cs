@@ -9,14 +9,17 @@ public class Jump : MonoBehaviour
     public float jumpMultiplier;
     IEnumerator playerJump()
     {
+        jumpMultiplier = airtime / 200f;
         for(int i = 0; i < airtime; i++)
         {
             if (i < airtime / 2)
             {
+                jumpMultiplier -= 0.01f;
                 transform.Translate(Vector3.up * jumpMultiplier);
             }
-            else
+            else if (i > airtime / 2)
             {
+                jumpMultiplier += 0.01f;
                 transform.Translate(Vector3.up * -1 * jumpMultiplier);
             }
             yield return null;
@@ -27,7 +30,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("up"))
+        if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.Space))
         {
             while(isJumping == false)
             {

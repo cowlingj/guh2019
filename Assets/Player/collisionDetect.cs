@@ -11,7 +11,7 @@ public class collisionDetect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class collisionDetect : MonoBehaviour
     {
         if (collision.CompareTag("Obstacle"))
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Game Over");
         }
         else if (collision.CompareTag("Coin"))
         {
