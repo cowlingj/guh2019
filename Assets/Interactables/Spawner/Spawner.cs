@@ -47,8 +47,13 @@ public class Spawner : MonoBehaviour
 
     foreach (EnableObject instance in instances)
     {
+            if (instance.gameObject == null)
+            {
+                toRemove.Add(instance);
+                break;
+            }
 
-      bool visible = GeometryUtility.TestPlanesAABB(
+            bool visible = GeometryUtility.TestPlanesAABB(
           planes,
           instance.gameObject.GetComponent<Renderer>().bounds
       );
@@ -59,9 +64,13 @@ public class Spawner : MonoBehaviour
       }
       else if (!visible && instance.enabled)
       {
-        Destroy(instance.gameObject);
-        toRemove.Add(instance);
-      }
+                if (!(instance.gameObject == null))
+                {
+                    Destroy(instance.gameObject);
+                }
+                toRemove.Add(instance);
+
+            }
     }
 
     foreach (EnableObject item in toRemove)

@@ -29,7 +29,7 @@ public class collisionDetect : MonoBehaviour
         else if (collision.CompareTag("Coin"))
         {
             score += 100;
-            //Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
