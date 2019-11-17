@@ -236,7 +236,7 @@ MonoBehaviour:
   - priority: 1
     gameObject: {fileID: 3135417551397503220, guid: f1da4e8cf50684b578bf46f6585e31be,
       type: 3}
-  - priority: 0
+  - priority: 2
     gameObject: {fileID: 811017184550283199, guid: 544884581c2ed5b27af026427f6427e5,
       type: 3}
   tickLength: 1
