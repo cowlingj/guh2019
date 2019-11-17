@@ -18,16 +18,23 @@ public class collisionDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKeyDown("s"))
+        {            
+                score += 100;            
+        }
         ScoreText.text = "Score: " + score.ToString();
+
+        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("k"))
+        {
+            GameOver();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obstacle"))
         {
-            PlayerPrefs.SetInt("score", score);
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("Game Over");
+            GameOver();
         }
         else if (collision.CompareTag("Coin"))
         {
@@ -35,5 +42,12 @@ public class collisionDetect : MonoBehaviour
             coinSound.Play();
             Destroy(collision.gameObject);
         }
+    }
+
+    void GameOver()
+    {
+        PlayerPrefs.SetInt("score", score);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Game Over");
     }
 }
