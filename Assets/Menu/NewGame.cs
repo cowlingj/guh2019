@@ -10,4 +10,13 @@ public class NewGame : MonoBehaviour
         SceneManager.LoadScene("Main Game");
     }
 
+    public void Settings() {
+        // TODO
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
