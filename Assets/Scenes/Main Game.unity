@@ -1127,7 +1127,7 @@ MonoBehaviour:
   initialTimeScale: 1
   maxTimeScale: 5
   timeScaleInc: 0.05
-  spawner: {fileID: 0}
+  spawner: {fileID: 709889074}
 --- !u!4 &2085522671
 Transform:
   m_ObjectHideFlags: 0
