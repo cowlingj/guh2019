@@ -6,11 +6,11 @@ public class DifficultyManager : MonoBehaviour
 
     public float initialSpawnerDelay = 10f;
     public float minSpawnerDelay = 0.1f;
-    public float spawnerDelayDec = 1.1f;
+    public float spawnerDelayDec = 0.1f;
 
     public float initialTimeScale = 1f;
     public float maxTimeScale = 5f;
-    public float timeScaleInc = 0.1f;
+    public float timeScaleInc = 0.05f;
 
     public SetPieceSpawner spawner;
     void Start() {
