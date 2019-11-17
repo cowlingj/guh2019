@@ -1061,9 +1061,9 @@ RectTransform:
   m_Father: {fileID: 1146585371}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.4, y: 207.1}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -103, y: -21}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498359033
@@ -1794,12 +1794,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToLevelUp: 5
-  initialSpawnerDelay: 10
-  minSpawnerDelay: 3
-  spawnerDelayDec: 0.1
+  initialSpawnerDelay: 7
+  minSpawnerDelay: 2
+  spawnerDelayDec: 0.2
   initialTimeScale: 1
-  maxTimeScale: 5
-  timeScaleInc: 0.05
+  maxTimeScale: 6
+  timeScaleInc: 0.08
   spawner: {fileID: 709889074}
 --- !u!4 &2119309325
 Transform:
