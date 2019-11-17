@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToLevelUp: 5
   initialSpawnerDelay: 10
-  minSpawnerDelay: 0.1
+  minSpawnerDelay: 3
   spawnerDelayDec: 0.1
   initialTimeScale: 1
   maxTimeScale: 5
