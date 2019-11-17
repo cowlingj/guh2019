@@ -15,6 +15,6 @@ public class MoveBehaviour : MonoBehaviour
     }
 
     void Update() {
-        gameObject.transform.Translate(v);
+        gameObject.transform.Translate(v * Time.timeScale);
     }
 }
