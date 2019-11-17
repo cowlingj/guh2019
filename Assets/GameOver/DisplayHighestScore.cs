@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 public class DisplayHighestScore : MonoBehaviour
 {
-  public Text scoreText;
-  private int maximumScore=0;
+
+  public Text highScore;
     // Start is called before the first frame update
     void Start()
     {
+      highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+      int HighScore = PlayerPrefs.GetInt("HighScore", 0);
       int playerScore = PlayerPrefs.GetInt("score");
-      if (playerScore> maximumScore)
+      if (playerScore> HighScore)
       {
-          maximumScore= playerScore;
-          scoreText.text = "Highest score! Congrats!";
+          HighScore= playerScore;
+          highScore.text = "Highest score! Congrats!";
+          PlayerPrefs.SetInt("HighScore", HighScore);
+          PlayerPrefs.Save();
       }
       else
       {
-         scoreText.text = "Highest score is: " + maximumScore.ToString();
+         highScore.text = "Highest score is: " + HighScore.ToString();
       }
+
     }
   }
 
