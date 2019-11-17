@@ -11,12 +11,7 @@ public class SetPieceSpawner : MonoBehaviour
 
   private List<GameObject> unrolledTemplates = new List<GameObject>();
 
-  public float tickLength = 1f;
-
-  public float tickVariance = 1f;
-
-  public float minTickLength = 0.1f;
-
+  public float delay = 1f;
   public float initialDelay = 0f;
 
   private void Start()
@@ -48,8 +43,7 @@ public class SetPieceSpawner : MonoBehaviour
               Instantiate(unrolledTemplates[UnityEngine.Random.Range(0, unrolledTemplates.Count)], gameObject.transform)
           )
       );
-      float wait = tickLength * UnityEngine.Random.Range(0.5f, 1.5f);
-      yield return new WaitForSeconds(wait);
+      yield return new WaitForSeconds(delay);
     }
   }
 
