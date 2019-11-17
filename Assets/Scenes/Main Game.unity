@@ -281,9 +281,7 @@ MonoBehaviour:
   - priority: 5
     gameObject: {fileID: 7589009956434047829, guid: 10994952e14954fad984adcac0158bea,
       type: 3}
-  tickLength: 3
-  tickVariance: 1
-  minTickLength: 1.5
+  delay: 1
   initialDelay: 0
 --- !u!4 &709889075
 Transform:
@@ -1092,4 +1090,55 @@ Transform:
   - {fileID: 461526900}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2085522669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085522671}
+  - component: {fileID: 2085522670}
+  m_Layer: 0
+  m_Name: DifficultyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2085522670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085522669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895cdee21b5917ad39cf556b680e2457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToLevelUp: 5
+  initialSpawnerDelay: 10
+  minSpawnerDelay: 0.1
+  spawnerDelayDec: 0.1
+  initialTimeScale: 1
+  maxTimeScale: 5
+  timeScaleInc: 0.05
+  spawner: {fileID: 0}
+--- !u!4 &2085522671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085522669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3032306, y: 4.1712427, z: -116.27828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
