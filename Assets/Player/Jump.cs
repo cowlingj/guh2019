@@ -7,10 +7,18 @@ public class Jump : MonoBehaviour
     private bool isJumping;
     public int airtime = 60;
     public float jumpMultiplier;
+    public Animation animation;
+
+    void Start()
+    {
+        animation = gameObject.GetComponent<Animation>();
+    }
+
     IEnumerator playerJump()
     {
         jumpMultiplier = airtime / 200f;
-        for(int i = 0; i < airtime; i++)
+        animation.Play();
+        for (int i = 0; i < airtime; i++)
         {
             if (i < airtime / 2)
             {
@@ -24,15 +32,16 @@ public class Jump : MonoBehaviour
             }
             yield return null;
         }
+        animation.Stop();
         isJumping = false;
-        
+
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.Space))
         {
-            while(isJumping == false)
+            while (isJumping == false)
             {
                 isJumping = true;
                 StartCoroutine("playerJump");
@@ -40,3 +49,4 @@ public class Jump : MonoBehaviour
         }
     }
 }
+
