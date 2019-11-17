@@ -28,12 +28,13 @@ public class DifficultyManager : MonoBehaviour
             CancelInvoke();
         }
 
-        if (Time.timeScale <= maxTimeScale) {
-            Time.timeScale += timeScaleInc;
+        // TODO: verify easier
+        if (Time.timeScale <= maxTimeScale * PlayerPrefs.GetFloat("Speed", 1)) {
+            Time.timeScale += timeScaleInc * PlayerPrefs.GetFloat("Speed", 1);
         }
 
-        if (spawner && spawner.delay > minSpawnerDelay) {
-            spawner.delay -= spawnerDelayDec;
+        if (spawner && spawner.delay * PlayerPrefs.GetFloat("Speed", 1) > minSpawnerDelay) {
+            spawner.delay -= spawnerDelayDec * PlayerPrefs.GetFloat("Speed", 1);
         }
     }
 }

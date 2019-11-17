@@ -20,18 +20,18 @@ public class collisionDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKeyDown("s"))
+        if (PlayerPrefs.GetInt("DeveloperMode") == 1 && Input.GetKeyDown("s"))
         {            
                 score += 100;            
         }
         ScoreText.text = "Score: " + score.ToString();
 
-        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("k"))
+        if (PlayerPrefs.GetInt("DeveloperMode") == 1 && Input.GetKey("k"))
         {
             GameOver();
         }
 
-        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("o"))
+        if (PlayerPrefs.GetInt("DeveloperMode") == 1 && Input.GetKey("o"))
         {
             if (ignoreObstacles == false)
             {
@@ -44,7 +44,7 @@ public class collisionDetect : MonoBehaviour
             }
         }
 
-        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("c"))
+        if (PlayerPrefs.GetInt("DeveloperMode") == 1 && Input.GetKey("c"))
         {
             if (ignoreCoins == false)
             {
