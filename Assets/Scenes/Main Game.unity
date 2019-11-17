@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templates:
-  - priority: 3
+  - priority: 5
     gameObject: {fileID: 6017030432125366188, guid: cdb323b3bc11d5379901f11328f039d8,
       type: 3}
   - priority: 3
@@ -239,7 +239,7 @@ MonoBehaviour:
   - priority: 2
     gameObject: {fileID: 6117684989418518448, guid: 7f74b7566e8608630b008ed7e8401190,
       type: 3}
-  - priority: 2
+  - priority: 3
     gameObject: {fileID: 5449006879451877550, guid: 4d8e23f568381fa58a5625fb1f648a39,
       type: 3}
   - priority: 1
@@ -262,6 +262,24 @@ MonoBehaviour:
       type: 3}
   - priority: 2
     gameObject: {fileID: 729918316689804856, guid: 7f18b6cb17930742296220e61c6ab184,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 4964910602034270996, guid: 44f34873a86e9471ba1c4a2c93e12508,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 8314108582216415998, guid: 82e2cc257fec54e6db5cdf6663855035,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 7153751803774627712, guid: dcea6ad26ffe1448aa1cd963ddd12d4d,
+      type: 3}
+  - priority: 5
+    gameObject: {fileID: 4077369947161582545, guid: 51b70e86d2da349bdb2d2ad12a4b8fd7,
+      type: 3}
+  - priority: 2
+    gameObject: {fileID: 3485441442608923872, guid: be4908cfdb51743dd9edb4d648714f65,
+      type: 3}
+  - priority: 5
+    gameObject: {fileID: 7589009956434047829, guid: 10994952e14954fad984adcac0158bea,
       type: 3}
   tickLength: 3
   tickVariance: 1
