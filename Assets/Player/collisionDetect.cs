@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class collisionDetect : MonoBehaviour
 {
+    private bool ignoreObstacles = false;
+    private bool ignoreCoins = false;
     public Text ScoreText;
     private int score;
     public AudioSource coinSound;
@@ -28,19 +30,60 @@ public class collisionDetect : MonoBehaviour
         {
             GameOver();
         }
+
+        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("o"))
+        {
+            if (ignoreObstacles == false)
+            {
+                Debug.Log("Obstacles ignored");
+                ignoreObstacles = true;
+            }
+            else
+            {
+                ignoreObstacles = false;
+            }
+        }
+
+        if (PlayerPrefs.GetInt("HasTools") == 1 && Input.GetKey("c"))
+        {
+            if (ignoreCoins == false)
+            {
+                Debug.Log("Coins being ignored");
+                ignoreCoins = true;
+            }
+            else
+            {
+                ignoreCoins = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obstacle"))
         {
-            GameOver();
+            if (ignoreObstacles == true)
+            {
+                return;
+            }
+            else
+            {
+                GameOver();
+            }
+            
         }
         else if (collision.CompareTag("Coin"))
         {
-            score += 100;
-            coinSound.Play();
-            Destroy(collision.gameObject);
+            if (ignoreCoins == true)
+            {
+                return;
+            }
+            else
+            {
+                score += 100;
+                coinSound.Play();
+                Destroy(collision.gameObject);
+            }           
         }
     }
 
