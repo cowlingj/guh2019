@@ -8,10 +8,11 @@ public class collisionDetect : MonoBehaviour
 {
     public Text ScoreText;
     private int score;
+    public AudioSource coinSound;
     // Start is called before the first frame update
     void Start()
     {
-
+        coinSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class collisionDetect : MonoBehaviour
         else if (collision.CompareTag("Coin"))
         {
             score += 100;
+            coinSound.Play();
             Destroy(collision.gameObject);
         }
     }
