@@ -62,9 +62,15 @@ public class SetPieceSpawner : MonoBehaviour
     foreach (EnablableObject instance in instances)
     {
 
+      if (instance.gameObject == null)
+      {
+        toRemove.Add(instance);
+        break;
+      }
+
       bool visible = GeometryUtility.TestPlanesAABB(
           planes,
-          instance.gameObject.GetComponent<Renderer>().bounds
+          GetBounds(instance.gameObject)
       );
 
       if (visible && !instance.enabled)
@@ -85,6 +91,16 @@ public class SetPieceSpawner : MonoBehaviour
 
   }
 
+private Bounds GetBounds(GameObject obj) {
+    Bounds bounds = new Bounds(obj.transform.position, Vector3.zero);
+    Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
+    foreach (Renderer renderer in renderers) {
+        if (renderer.enabled) {
+          bounds.Encapsulate(renderer.bounds);
+        }
+    }
+    return bounds;
+  }
   private class EnablableObject
   {
 
