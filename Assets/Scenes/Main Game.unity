@@ -230,18 +230,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templates:
-  - priority: 0
-    gameObject: {fileID: 3169173781190876835, guid: 252ddf89a12534289ba7363aa6b202c6,
+  - priority: 3
+    gameObject: {fileID: 6017030432125366188, guid: cdb323b3bc11d5379901f11328f039d8,
       type: 3}
-  - priority: 1
-    gameObject: {fileID: 3135417551397503220, guid: f1da4e8cf50684b578bf46f6585e31be,
+  - priority: 3
+    gameObject: {fileID: 2067498730543156567, guid: 2d0ea7dfbae9e36099eafffef775e27b,
       type: 3}
   - priority: 2
-    gameObject: {fileID: 811017184550283199, guid: 544884581c2ed5b27af026427f6427e5,
+    gameObject: {fileID: 6117684989418518448, guid: 7f74b7566e8608630b008ed7e8401190,
       type: 3}
-  tickLength: 1
+  - priority: 2
+    gameObject: {fileID: 5449006879451877550, guid: 4d8e23f568381fa58a5625fb1f648a39,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 6078353075357110714, guid: 66acae8a3cc2ae8a6974505698a41a6a,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 8701913248135140492, guid: a629312a06050db79af65a5b5f003430,
+      type: 3}
+  - priority: 3
+    gameObject: {fileID: 773823346792445517, guid: 9fbfc871b0bb5ab63b621bdc3f9231ff,
+      type: 3}
+  - priority: 2
+    gameObject: {fileID: 7425692225252875058, guid: 18888c042859b9359af7fe23ee7f4df8,
+      type: 3}
+  - priority: 1
+    gameObject: {fileID: 6947619196688151523, guid: 94bfe6ce55572a970bbbe68b3d75bac0,
+      type: 3}
+  - priority: 2
+    gameObject: {fileID: 4441344176519860188, guid: 3f097fec3850d4fdbb0c239e0a471ce3,
+      type: 3}
+  - priority: 2
+    gameObject: {fileID: 729918316689804856, guid: 7f18b6cb17930742296220e61c6ab184,
+      type: 3}
+  tickLength: 3
   tickVariance: 1
-  minTickLength: 0.1
+  minTickLength: 1.5
   initialDelay: 0
 --- !u!4 &709889075
 Transform:
@@ -568,9 +592,9 @@ RectTransform:
   m_Father: {fileID: 1146585371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 200}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179999440
