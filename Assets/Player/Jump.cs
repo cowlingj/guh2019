@@ -7,17 +7,11 @@ public class Jump : MonoBehaviour
     private bool isJumping;
     public int airtime = 60;
     public float jumpMultiplier;
-    public Animation animation;
 
-    void Start()
-    {
-        animation = gameObject.GetComponent<Animation>();
-    }
 
     IEnumerator playerJump()
     {
         jumpMultiplier = airtime / 200f;
-        animation.Play();
         for (int i = 0; i < airtime; i++)
         {
             if (i < airtime / 2)
@@ -32,7 +26,6 @@ public class Jump : MonoBehaviour
             }
             yield return null;
         }
-        animation.Stop();
         isJumping = false;
 
     }
